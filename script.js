@@ -1,33 +1,22 @@
-function calculate(operation){
+function calculate(op) {
 
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
 
-let a = Number(document.getElementById("num1").value);
+    let result = 0;
 
-let b = Number(document.getElementById("num2").value);
+    if (op === "+") {
+        result = a + b;
+    }
+    else if (op === "-") {
+        result = a - b;
+    }
+    else if (op === "*") {
+        result = a * b;
+    }
+    else if (op === "/") {
+        result = a / b;
+    }
 
-
-let result;
-
-
-if(operation=="+"){
-    result=a+b;
-}
-
-else if(operation=="-"){
-    result=a-b;
-}
-
-else if(operation=="*"){
-    result=a*b;
-}
-
-else if(operation=="/"){
-    result=a/b;
-}
-
-
-document.getElementById("result").innerHTML =
-"Result: " + result;
-
-
+    document.getElementById("result").innerHTML = "Result: " + result;
 }
